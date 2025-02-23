@@ -73,13 +73,13 @@ data/
 #### 2(a). What method was used to compute the area (in meters) for a single instance?
 Ans. Since we have already calculated the geo-coordinates we can multiply the widht and height of the bounding box to get an estimate of area in meter
 
-total Area :  5673715.650499898
+        total Area :  5673715.650499898
 
 #### 2(b). What is the mean area and standard deviation?
 
-mean area:  191.5178278649789
+        mean area:  191.5178278649789
 
-standard deviation of area:  630.7003355500086
+        standard deviation of area:  630.7003355500086
 
 #### 2(c). Plot the histogram of areas. What do you observe?
 
@@ -91,20 +91,20 @@ We can say that majrity of th e solar panels (92.6%) have area less than 407 m^2
 
 #### 1. Write a function to compute IoU (Intersection over Union)
 
-IoU from custom function: 0.5840266222961731
-IoU from Supervision library : 0.58403
+        IoU from custom function: 0.5840266222961731
+        IoU from Supervision library : 0.58403
       
 #### 2(a). Use Pascal VOC 11 point interpolation method to implement the function 
 
-Average Precision (VOC 11 points): 0.41287878787878785
+        Average Precision (VOC 11 points): 0.41287878787878785
 
 #### 2(b). Use COCO 101-point interpolation method to implement the function
 
-Average Precision (COCO 101 points): 0.41996699669966986
+        Average Precision (COCO 101 points): 0.41996699669966986
 
 #### 2(c). Use Area under Precision-Recall Curve (AP) method to implement the function 
 
- Average Precision (AUC): 0.2745039682539682
+        Average Precision (AUC): 0.2745039682539682
 
 #### 2(d). Randomly generate 10 images of size 100x100. Randomly generate 10 ground truth boxes of size 20x20 and 10 predicted boxes of size 20x20 in each image. Assume there is only one class of objects. Compare the AP50 (Average Precision at IoU 0.5) computed by 3 of your methods
 
@@ -124,48 +124,45 @@ Average Precision (COCO 101 points): 0.41996699669966986
 
 #### 3(a). Compute mAP50 with supervision and compare with your implementation. What do you observe 
 
-mAP50 calculated using supervision library : 0.9861568506491517
+        mAP50 calculated using supervision library : 0.9861568506491517
 
-mAP50 (VOC-11): 0.9666
+        mAP50 (VOC-11): 0.9666
 
-mAP50 (COCO-101): 0.9713
+        mAP50 (COCO-101): 0.9713
 
-mAP50 (AUC): 0.8008
+        mAP50 (AUC): 0.8008
 
 Observation : The mAP50 calculated using supervision library is closest to the one calculated using COCO-101 method.
 
 #### 3(b). Create a table of Precision, Recall and F1-scores where rows are IoU thresholds [0.1, 0.3, 0.5, 0.7, 0.9] and columns are confidence thresholds [0.1, 0.3, 0.5, 0.7, 0.9].
 
-PRECISION TABLE:
-==================================================
-         Conf_0.1  Conf_0.3  Conf_0.5  Conf_0.7  Conf_0.9
-IoU_0.1     0.980     0.979     0.971     0.945     0.397
-IoU_0.3     0.980     0.979     0.970     0.945     0.397
-IoU_0.5     0.979     0.978     0.970     0.945     0.397
-IoU_0.7     0.968     0.967     0.961     0.942     0.397
-IoU_0.9     0.703     0.703     0.702     0.700     0.387
+## PRECISION TABLE:
+|        | Conf_0.1 | Conf_0.3 | Conf_0.5 | Conf_0.7 | Conf_0.9 |
+|--------|---------|---------|---------|---------|---------|
+| IoU_0.1 | 0.980   | 0.979   | 0.971   | 0.945   | 0.397   |
+| IoU_0.3 | 0.980   | 0.979   | 0.970   | 0.945   | 0.397   |
+| IoU_0.5 | 0.979   | 0.978   | 0.970   | 0.945   | 0.397   |
+| IoU_0.7 | 0.968   | 0.967   | 0.961   | 0.942   | 0.397   |
+| IoU_0.9 | 0.703   | 0.703   | 0.702   | 0.700   | 0.387   |
 
+## RECALL TABLE:
+|        | Conf_0.1 | Conf_0.3 | Conf_0.5 | Conf_0.7 | Conf_0.9 |
+|--------|---------|---------|---------|---------|---------|
+| IoU_0.1 | 0.961   | 0.967   | 0.987   | 0.996   | 1.000   |
+| IoU_0.3 | 0.961   | 0.967   | 0.986   | 0.996   | 1.000   |
+| IoU_0.5 | 0.960   | 0.966   | 0.986   | 0.995   | 1.000   |
+| IoU_0.7 | 0.949   | 0.955   | 0.977   | 0.992   | 1.000   |
+| IoU_0.9 | 0.689   | 0.694   | 0.714   | 0.737   | 0.974   |
 
+## F1 TABLE:
+|        | Conf_0.1 | Conf_0.3 | Conf_0.5 | Conf_0.7 | Conf_0.9 |
+|--------|---------|---------|---------|---------|---------|
+| IoU_0.1 | 0.971   | 0.973   | 0.979   | 0.970   | 0.569   |
+| IoU_0.3 | 0.971   | 0.973   | 0.978   | 0.970   | 0.569   |
+| IoU_0.5 | 0.969   | 0.972   | 0.978   | 0.969   | 0.569   |
+| IoU_0.7 | 0.958   | 0.961   | 0.969   | 0.966   | 0.569   |
+| IoU_0.9 | 0.696   | 0.699   | 0.708   | 0.718   | 0.554   |
 
-RECALL TABLE:
-==================================================
-         Conf_0.1  Conf_0.3  Conf_0.5  Conf_0.7  Conf_0.9
-IoU_0.1     0.961     0.967     0.987     0.996     1.000
-IoU_0.3     0.961     0.967     0.986     0.996     1.000
-IoU_0.5     0.960     0.966     0.986     0.995     1.000
-IoU_0.7     0.949     0.955     0.977     0.992     1.000
-IoU_0.9     0.689     0.694     0.714     0.737     0.974
-
-
-
-F1 TABLE:
-==================================================
-         Conf_0.1  Conf_0.3  Conf_0.5  Conf_0.7  Conf_0.9
-IoU_0.1     0.971     0.973     0.979     0.970     0.569
-IoU_0.3     0.971     0.973     0.978     0.970     0.569
-IoU_0.5     0.969     0.972     0.978     0.969     0.569
-IoU_0.7     0.958     0.961     0.969     0.966     0.569
-IoU_0.9     0.696     0.699     0.708     0.718     0.554
 
 
 ## Acknowledgment
