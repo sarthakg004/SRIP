@@ -96,15 +96,15 @@ We can say that majrity of th e solar panels (92.6%) have area less than 407 m^2
       
 #### 2(a). Use Pascal VOC 11 point interpolation method to implement the function 
 
-        Average Precision (VOC 11 points): 0.41287878787878785
+        Average Precision (VOC 11 points): 0.6545454545454545
 
 #### 2(b). Use COCO 101-point interpolation method to implement the function
 
-        Average Precision (COCO 101 points): 0.41996699669966986
+        Average Precision (COCO 101 points): 0.6415841584158416
 
 #### 2(c). Use Area under Precision-Recall Curve (AP) method to implement the function 
 
-        Average Precision (AUC): 0.2745039682539682
+        Average Precision (AUC): 0.47420634920634924
 
 #### 2(d). Randomly generate 10 images of size 100x100. Randomly generate 10 ground truth boxes of size 20x20 and 10 predicted boxes of size 20x20 in each image. Assume there is only one class of objects. Compare the AP50 (Average Precision at IoU 0.5) computed by 3 of your methods
 
@@ -114,13 +114,15 @@ We can say that majrity of th e solar panels (92.6%) have area less than 407 m^2
 
 #### 1. Use any model from Ultralytics like YOLO to train the object detection model. Show that validation loss is converged. 
 
-- Trained YOLO11m model for 500 epochs with early stopping patience of 20 and batch size 32.
-- Training stopped after 130 epochs
+- Trained YOLO11m model for 200 epochs with early stopping patience of 20 and batch size 32.
+- Training stopped after 124 epochs
 
 ![alt text](assets/image-3.png)
 
 
 #### 2. Predict solar panels using the trained model. Visualize the ground truth and predicted bounding boxes on 3-4 random samples from the test dataset. Use appropriate color schemes to differentiate between ground truth and predicted labels.
+
+![alt text](assets/image-4.png)
 
 #### 3(a). Compute mAP50 with supervision and compare with your implementation. What do you observe 
 
