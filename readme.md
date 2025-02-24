@@ -96,15 +96,15 @@ We can say that majrity of th e solar panels (92.6%) have area less than 407 m^2
       
 #### 2(a). Use Pascal VOC 11 point interpolation method to implement the function 
 
-        Average Precision (VOC 11 points): 0.6545454545454545
+        Average Precision (VOC 11 points): 0.5181818181818182
 
 #### 2(b). Use COCO 101-point interpolation method to implement the function
 
-        Average Precision (COCO 101 points): 0.6415841584158416
+        Average Precision (COCO 101 points): 0.5465346534653468
 
 #### 2(c). Use Area under Precision-Recall Curve (AP) method to implement the function 
 
-        Average Precision (AUC): 0.47420634920634924
+        Average Precision (AUC): 0.20124999999999998
 
 #### 2(d). Randomly generate 10 images of size 100x100. Randomly generate 10 ground truth boxes of size 20x20 and 10 predicted boxes of size 20x20 in each image. Assume there is only one class of objects. Compare the AP50 (Average Precision at IoU 0.5) computed by 3 of your methods
 
@@ -128,11 +128,11 @@ We can say that majrity of th e solar panels (92.6%) have area less than 407 m^2
 
         mAP50 calculated using supervision library : 0.9861568506491517
 
-        mAP50 (VOC-11): 0.9666
+        mAP50 (VOC-11): 0.9351
 
-        mAP50 (COCO-101): 0.9713
+        mAP50 (COCO-101): 0.9749
 
-        mAP50 (AUC): 0.8008
+        mAP50 (AUC): 0.9420
 
 Observation : The mAP50 calculated using supervision library is closest to the one calculated using COCO-101 method.
 
